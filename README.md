@@ -13,9 +13,9 @@ Stochastic interventions provide a promising solution to fundamental issues
 posed by non- identification and inefficiency in causal inference, by allowing
 for the counterfactual intervention distribution to be defined as a function of
 its natural distribution. While such approaches are promising, real data
-analyses are often further complicated by economic constraints, such as when
-the primary variable of interest is far more expensive to collect than
-auxiliary covariates. Two-phase sampling schemes offer a promising solution --
+analyses are often further complicated by economic constraints, such as when the
+primary variable of interest is far more expensive to collect than auxiliary
+covariates. Two-phase sampling schemes offer a promising solution --
 unfortunately, their use produces side effects that require further adjustment
 when inference remains the principal goal. We present a novel approach for use
 in such settings: An augmented targeted minimum loss-based estimator for the
