@@ -1,0 +1,142 @@
+\documentclass[]{elsarticle} %review=doublespace preprint=single 5p=2 column
+%%% Begin My package additions %%%%%%%%%%%%%%%%%%%
+\usepackage[hyphens]{url}
+
+  \journal{the 2020 SER Meeting} % Sets Journal name
+
+
+\usepackage{lineno} % add
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{graphicx}
+\usepackage{booktabs} % book-quality tables
+%%%%%%%%%%%%%%%% end my additions to header
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \usepackage{fontspec}
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\bibliographystyle{elsarticle-harv}
+\usepackage{graphicx}
+% We will generate all images so they have a width \maxwidth. This means
+% that they will get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+\else\Gin@nat@width\fi}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={2020 SER Meeting Abstract},
+            colorlinks=false,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+\setcounter{secnumdepth}{0}
+% Pandoc toggle for numbering sections (defaults to be off)
+\setcounter{secnumdepth}{0}
+
+
+% Pandoc header
+
+
+
+\begin{document}
+\begin{frontmatter}
+
+  \title{2020 SER Meeting Abstract}
+    \author[biostat-berkeley]{Nima Hejazi}
+  
+    \author[epibiostat-berkeley]{Mark van der Laan}
+  
+    \author[fredhutch]{Holly Janes}
+  
+    \author[fredhutch]{Peter Gilbert}
+  
+    \author[emory]{David Benkeser}
+  
+      \address[biostat-berkeley]{Graduate Group in Biostatistics, University of California, Berkeley}
+    \address[epibiostat-berkeley]{Division of Epidemiology and Biostatistics, University of California,
+Berkeley}
+    \address[fredhutch]{Vaccine and Infectious Disease Division, Fred Hutchinson Cancer Research
+Center}
+    \address[emory]{Department of Biostatistics and Bioinformatics, Emory University}
+      \cortext[1]{Title: Efficient estimation of stochastic interventions effects under
+two-phase sampling for the analysis of vaccine efficacy trials}
+    \cortext[2]{Character count: 1976 (with spaces)}
+    \cortext[3]{Corresponding author: nhejazi@berkeley.edu}
+    \cortext[4]{Key words: stochastic intervention, two-phase sampling, causal
+inference, targeted learning, vaccine efficacy trials}
+  
+  \begin{abstract}
+  
+  \end{abstract}
+  
+ \end{frontmatter}
+
+Causal inference has classically focused on the effect of static
+interventions, under which, for each unit, the magnitude of the
+treatment is set to a fixed, prespecified value. The evaluation of such
+interventions faces a host of issues, among them non-identification,
+violations of the assumption of positivity, and inefficiency. Stochastic
+interventions provide a promising solution to these fundamental issues
+of causal inference, by allowing for the counterfactual intervention
+distribution to be defined as a function of its natural (observed)
+distribution. Despite the promise of such approaches, real data analyses
+are often further complicated by economic constraints, such as when the
+primary variable of interest is far more expensive to collect than
+auxiliary covariates. Two-phase sampling schemes are often used to work
+around such constraints -- unfortunately, their use produces side
+effects that require further adjustment when formal inference is the
+principal goal of a study. We present a novel approach for use in such
+settings: augmented targeted minimum loss and one-step estimators for
+the causal effects of stochastic interventions, with guarantees of
+consistency, efficiency, and multiple robustness even in the presence of
+two-phase sampling. We further propose a technique that utilizes
+estimated counterfactual means under stochastic interventions to
+construct a nonparametric working marginal structural model to summarize
+the effects of changes in an exposure variable on the outcome of
+interest, analogous to a dose-response analysis. Using data from the
+recent HVTN 505 HIV vaccine efficacy trial, we demonstrate this
+technique by assessing the effects of changes in post-vaccination
+immunogenicity on HIV-1 acquisition across a range of possible shifts,
+outlining a highly interpretable variable importance measure for ranking
+multiple immune responses based on their utility as immunogenicity study
+endpoints in future HIV-1 vaccine trials.
+
+\newpage
+
+\includegraphics{./cd8_msm_tmle_summary.pdf}
+
+
+\end{document}
+
+
