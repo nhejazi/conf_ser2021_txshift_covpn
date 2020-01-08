@@ -1,19 +1,20 @@
 ---
 title: 2020 SER Meeting Abstract
+shortitle: XYZ
 author:
-  - name: Nima Hejazi
+  - name: Nima S. Hejazi
     #email: nhejazi@berkeley.edu
     affiliation: biostat-berkeley
-  - name: Mark van der Laan
+  - name: Mark J. van der Laan
     #email: laan@berkeley.edu
     affiliation: epibiostat-berkeley
-  - name: Holly Janes
+  - name: Holly E. Janes
     #email: hjanes@fredhutch.org
     affiliation: fredhutch
-  - name: Peter Gilbert
+  - name: Peter B. Gilbert
     #email: pgilbert@scharp.org
     affiliation: fredhutch
-  - name: David Benkeser
+  - name: David C. Benkeser
     #email: benkeser@emory.edu
     affiliation: emory
 address:
@@ -27,14 +28,14 @@ address:
     address: Department of Biostatistics and Bioinformatics, Emory University
 footnote:
   - code: 1
+    text: "Character count: 1976 (with spaces)"
+  - code: 2
+    text: "Corresponding author: nhejazi@berkeley.edu"
+  - code: 3
+    text: "Key words: causal inference, targeted learning, two-phase sampling, stochastic intervention, vaccine efficacy"
+  - code: 4
     text: "Title: Efficient estimation of stochastic interventions effects under
 two-phase sampling for the analysis of vaccine efficacy trials"
-  - code: 2
-    text: "Character count: 1976 (with spaces)"
-  - code: 3
-    text: "Corresponding author: nhejazi@berkeley.edu"
-  - code: 4
-    text: "Key words: stochastic intervention, two-phase sampling, causal inference, targeted learning, vaccine efficacy trials"
 journal: "the 2020 SER Meeting"
 date: "`r Sys.Date()`"
 csl: elsevier-harvard.csl
