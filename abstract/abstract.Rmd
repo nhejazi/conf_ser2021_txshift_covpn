@@ -34,7 +34,7 @@ footnote:
   - code: 3
     text: "Key words: causal inference, two-phase sampling, stochastic intervention, targeted learning, vaccine efficacy"
   - code: 4
-    text: "Title: Assessing the causal effects of stochastic interventions in vaccine efficacy trials with two-phased designs"
+    text: "Title: Leveraging the causal effects of stochastic interventions to evaluate vaccine efficacy in two-phase trials"
 journal: "the 2020 SER Meeting"
 date: "`r Sys.Date()`"
 csl: elsevier-harvard.csl
