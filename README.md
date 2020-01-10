@@ -7,6 +7,11 @@
 * __Title__: Robust inference on the causal effects of stochastic interventions
   under two-phase sampling, with applications in vaccine efficacy trials
 
+* _Keywords:_ stochastic intervention, two-phase sampling, causal inference,
+  targeted learning, vaccine efficacy, variable importance
+
+* Characters used: 1976/2000
+
 ### Abstract
 
 Causal inference has classically focused on the effect of static interventions,
@@ -35,8 +40,5 @@ post-vaccination immunogenicity on HIV-1 acquisition across a range of
 possible shifts, outlining a highly interpretable variable importance
 measure for ranking multiple immune responses based on their utility as
 immunogenicity study endpoints in future HIV-1 vaccine trials.
-
-_Keywords:_ stochastic intervention, two-phase sampling, causal inference,
-targeted learning, vaccine efficacy, variable importance
 
 ![](./cd8_msm_tmle_summary.pdf)
