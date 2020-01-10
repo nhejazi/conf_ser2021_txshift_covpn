@@ -38,3 +38,5 @@ immunogenicity study endpoints in future HIV-1 vaccine trials.
 
 _Keywords:_ stochastic intervention, two-phase sampling, causal inference,
 targeted learning, vaccine efficacy, variable importance
+
+![](./cd8_msm_tmle_summary.pdf)
