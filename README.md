@@ -40,5 +40,3 @@ post-vaccination immunogenicity on HIV-1 acquisition across a range of
 possible shifts, outlining a highly interpretable variable importance
 measure for ranking multiple immune responses based on their utility as
 immunogenicity study endpoints in future HIV-1 vaccine trials.
-
-![](./abstract/cd8_msm_tmle_summary.pdf)

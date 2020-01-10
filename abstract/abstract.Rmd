@@ -28,50 +28,45 @@ address:
     address: Department of Biostatistics and Bioinformatics, Emory University
 footnote:
   - code: 1
-    text: "Character count: 1976 (with spaces)"
+    text: "Character count: 1990 (with spaces)"
   - code: 2
     text: "Corresponding author: nhejazi@berkeley.edu"
   - code: 3
-    text: "Key words: causal inference, targeted learning, two-phase sampling, stochastic intervention, vaccine efficacy"
+    text: "Key words: causal inference, two-phase sampling, stochastic intervention, targeted learning, vaccine efficacy"
   - code: 4
-    text: "Title: Efficient estimation of stochastic interventions effects under
-two-phase sampling for the analysis of vaccine efficacy trials"
+    text: "Title: Assessing the causal effects of stochastic interventions in vaccine efficacy trials with two-phased designs"
 journal: "the 2020 SER Meeting"
 date: "`r Sys.Date()`"
 csl: elsevier-harvard.csl
 output: rticles::elsevier_article
 ---
 
-Causal inference has classically focused on the effect of static interventions,
-under which the magnitude of the treatment is set to a fixed, prespecified value
-for each unit. The evaluation of such interventions faces a host of issues,
-among them non-identification, violations of the assumption of positivity, and
-inefficiency. Stochastic interventions provide a promising solution to these
-fundamental issues by allowing for the
-
-referred to the parameter being estimated as a counterfactual risk, under a
-(hypothetically) shifted exposure distribution
-
-counterfactual intervention distribution
-to be defined as a function of its natural (observed) distribution. Despite the
-promise of such approaches, real data analyses are often further complicated by
-economic constraints, such as when the primary variable of interest is far more
-expensive to collect than auxiliary covariates.  Two-phase sampling schemes are
-often used to work around such constraints -- unfortunately, their use produces
-side effects that require further adjustment when formal inference is the
+Causal inference has traditionally focused on the effects of static
+interventions, under which the magnitude of the treatment is set to a fixed,
+prespecified value for each unit. The evaluation of such interventions faces a
+host of issues, among them non-identification, violations of the assumption of
+positivity, and inefficiency. Stochastic interventions provide a promising
+solution to these fundamental issues by allowing for the target parameter to be
+defined as the mean counterfactual outcome under a hypothetically shifted
+version of the observed exposure distribution. Despite the promise of such
+approaches, real data analyses are often further complicated by economic
+constraints, such as when the primary variable of interest is far more expensive
+to collect than auxiliary covariates. Two-phase sampling schemes are often used
+to bypass such limitations -- unfortunately, their use produces side effects
+that require further adjustment when formal statistical inference is the
 principal goal of a study. We present a novel approach for use in such settings:
 augmented targeted minimum loss and one-step estimators for the causal effects
 of stochastic interventions, with guarantees of consistency, efficiency, and
 multiple robustness even in the presence of two-phase sampling. We further
-propose a technique that utilizes estimated counterfactual means under
-stochastic interventions to construct a nonparametric working marginal
-structural model to summarize the effects of changes in an exposure variable on
-the outcome of interest, analogous to a dose-response analysis. Using data from
-the recent HVTN 505 HIV vaccine efficacy trial, we demonstrate this technique by
-assessing the effects of changes in post-vaccination immunogenicity on HIV-1
-acquisition across a range of possible shifts, outlining a highly interpretable
-variable importance measure for ranking multiple immune responses based on their
-utility as immunogenicity study endpoints in future HIV-1 vaccine trials.
+propose a technique that utilizes the estimated causal effects of stochastic
+interventions to construct a nonparametric working marginal structural model to
+summarize the effect of shifting an exposure variable on the outcome of
+interest, analogous to a dose-response analysis. Using data from the recent HVTN
+505 HIV vaccine efficacy trial, we demonstrate this technique by assessing the
+effects of changes in post-vaccination immunogenicity on HIV-1 acquisition
+across a range of possible shifts, outlining a highly interpretable variable
+importance measure for ranking multiple immune responses based on their utility
+as immunogenicity study endpoints in future HIV-1 vaccine trials.
 
 \newpage
 
