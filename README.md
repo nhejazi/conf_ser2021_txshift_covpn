@@ -2,7 +2,7 @@
 
 ## General Info
 
-* Date/Time: TBA
+* Date/Time: Wednesday, 16 December 2020
 
 * __Title__: Leveraging the causal effects of stochastic interventions to
   evaluate vaccine efficacy in two-phase trials
