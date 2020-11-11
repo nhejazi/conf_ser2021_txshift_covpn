@@ -1,6 +1,6 @@
 # SER 2020 Presentation
 
-## OAS Info
+## Oral Abstract Session Info
 
 * __Title__: Leveraging the causal effects of stochastic interventions to
   evaluate vaccine efficacy in two-phase trials
@@ -8,7 +8,8 @@
   targeted learning, vaccine efficacy
 * _Authors:_ Nima Hejazi, Mark van der Laan, David Benkeser, Holly Janes, Peter
   Gilbert
-* _Session_: Methods for the Thorny Challenges of Real Studies
+* _Session_: Methods for the Thorny Challenges of Real Studies (Chair: Jennifer
+  Ahern)
 * Date/Time: Wednesday, 16 December 2020
 * Our paper is [here](https://onlinelibrary.wiley.com/doi/10.1111/biom.13375);
   our slides are
