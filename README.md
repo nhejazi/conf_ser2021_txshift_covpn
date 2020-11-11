@@ -1,17 +1,18 @@
 # SER 2020 Presentation
 
-## General Info
-
-* Date/Time: Wednesday, 16 December 2020
+## OAS Info
 
 * __Title__: Leveraging the causal effects of stochastic interventions to
   evaluate vaccine efficacy in two-phase trials
-
 * _Keywords:_ causal inference, stochastic intervention, two-phase sampling,
   targeted learning, vaccine efficacy
-
 * _Authors:_ Nima Hejazi, Mark van der Laan, David Benkeser, Holly Janes, Peter
   Gilbert
+* _Session_: Methods for the Thorny Challenges of Real Studies
+* Date/Time: Wednesday, 16 December 2020
+* Our paper is [here](https://onlinelibrary.wiley.com/doi/10.1111/biom.13375);
+  our slides are
+  [here](https://statistics.berkeley.edu/~nhejazi/present/2020_ser_txshift.pdf)
 
 ## Abstract
 
