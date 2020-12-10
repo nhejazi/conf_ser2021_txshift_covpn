@@ -1,4 +1,4 @@
-TITLE = 2020_ser_txshift
+TITLE = 2021_ser_txshift_covpn
 
 .PHONY : all
 all: $(TITLE).pdf notes clean
