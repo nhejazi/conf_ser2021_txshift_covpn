@@ -2,40 +2,43 @@
 
 ## Oral Abstract Session Info
 
-* __Title__: TODO
-* _Keywords:_ causal inference, stochastic interventions, two-phase sampling,
+* __Title__: Evaluation of causal vaccine efficacy under stochastic
+  interventional shifts of an immunologic marker in COVID-19 vaccine efficacy
+  trials
+* _Keywords:_ causal inference, stochastic interventions, mediation analysis,
+  interventional effects, two-phase sampling, immune correlate of protection,
   vaccine efficacy, COVID-19
-* _Authors:_ Nima Hejazi, David Benkeser, Peter Gilbert
+* _Authors:_ Nima Hejazi, Peter Gilbert, David Benkeser
 * _Session_: TBD
 * Date/Time: TBD
 
 ## Abstract
 
-Characters used: X/2000
+Initial efficacy assessments of vaccine candidates for COVID-19 have made for
+a promising start to curbing the pandemic. A critical next step is identifying
+immune correlates of protection, that could be used in the development of
+next-generation protective vaccine candidates. Deploying the classical tools of
+causal inference in service of such goals is obstructed by the historical focus
+of the field on static interventions, which cannot be applied to _quantitative_
+immunologic marker measurements without simplifying assumptions. Stochastic
+interventions, which define the target parameter as the mean counterfactual
+outcome under shifted versions of the observed immunologic marker distribution,
+hold promise for circumventing such difficulties. Complicating analytic efforts
+further, vaccine efficacy trials regularly employ two-phase sampling of
+immunologic markers, necessitating careful adjustment for formal statistical
+inference.
 
-Causal inference has traditionally focused on the effects of static
-interventions, under which the magnitude of the treatment is set to a fixed,
-prespecified value for each unit. The evaluation of such interventions faces a
-host of issues, among them non-identification, violations of the assumption of
-positivity, and inefficiency. Stochastic interventions provide a promising
-solution to these fundamental issues by allowing for the target parameter to be
-defined as the mean counterfactual outcome under a hypothetically shifted
-version of the observed exposure distribution. Despite the promise of such
-approaches, real data analyses are often further complicated by economic
-constraints, such as when the primary variable of interest is far more expensive
-to collect than auxiliary covariates. Two-phase sampling schemes are often used
-to bypass such limitations -- unfortunately, their use produces side effects
-that require further adjustment when formal statistical inference is the
-principal goal of a study. We present a novel approach for use in such settings:
-augmented targeted minimum loss and one-step estimators for the causal effects
-of stochastic interventions, with guarantees of consistency, efficiency, and
-multiple robustness even in the presence of two-phase sampling. We further
-propose a technique that utilizes the estimated causal effects of stochastic
-interventions to construct a nonparametric working marginal structural model to
-summarize the effect of shifting an exposure variable on the outcome of
-interest, analogous to a dose-response analysis. Using data from the recent HVTN
-505 HIV vaccine efficacy trial, we demonstrate this technique by assessing the
-effects of changes in post-vaccination immunogenicity on HIV-1 acquisition
-across a range of possible shifts, outlining a highly interpretable variable
-importance measure for ranking multiple immune responses based on their utility
-as immunogenicity study endpoints in future HIV-1 vaccine trials.
+We present a novel framework for evaluating _causal_ vaccine efficacy under
+stochastic interventional shifts of immunologic markers, with multiply robust,
+nonparametric-efficient estimators utilizing state-of-the-art machine learning
+in nuisance parameter estimation. Our effect definitions quantify how disease
+risk would change across counterfactual shifts of the observed immunogenicity of
+immunologic markers modulated by vaccination, similar to a dose-response
+analysis. Our framework readily incorporates corrections for two-phase sampling
+and right-censoring of disease endpoints, and defines vaccine efficacy by
+comparing counterfactual risks in vaccine and placebo arms. The approach,
+appearing in the correlates statistical analysis plan
+(https://doi.org/10.6084/m9.figshare.13198595) of the COVID-19 Prevention
+Network, is applied to mock data inspired by real-world vaccine efficacy trials
+to demonstrate how candidate correlates of protection may be evaluated by the
+impacts on disease risk of posited post-vaccination immunogenicity shifts.
