@@ -10,7 +10,6 @@
   vaccine efficacy, COVID-19
 * _Authors:_ Nima Hejazi, Peter Gilbert, David Benkeser
 * _Session_: Infectious Diseases: Oral abstract Session (Chair: Joanna Merckx)
-* Date/Time: TBD
 
 ## Abstract
 
