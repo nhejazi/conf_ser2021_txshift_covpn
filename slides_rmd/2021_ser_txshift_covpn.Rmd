@@ -157,8 +157,8 @@ knitr::include_graphics(here::here("img", "casecohort.png"))
 * Observed data $O = (C, C X) = (L, C, C S, Y)$, where $C \in \{0,1\}$ indicates
   inclusion in the second phase sample.
 
-.footnote[[*] [Breslow (2003)](https://doi.org/10.1214/aos/1059655907),
-[Breslow (2009)](https://doi.org/10.1007/s12561-009-9001-6) ]
+.footnote[[*] [Breslow et al. (2003)](https://doi.org/10.1214/aos/1059655907),
+[Breslow et al. (2009)](https://doi.org/10.1007/s12561-009-9001-6) ]
 
 ---
 
@@ -205,13 +205,22 @@ class: inverse, center, middle
 
 ## Stochastic Interventions
 
-* _Stochastic interventions\*_ as modified treatment policies:
-   $$d(s, l) = s + \delta \text{(if plausible)}, s \text{(otherwise)}$$
+__Target Causal Parameter:__
+
+* _Stochastic interventions\*_ as modified exposure policies:
+  $$d(s,l) = s + \delta,$$
+  where $\delta := 0$ if $s + \delta$ is .red[not] plausible for a given
+  individual.
 * Our estimand is $\psi_{0, d} := \mathbb{E}_{P_0^d}\{Y_{d(S,L)}\}$,
   mean of counterfactual $Y_{d(S, L)}$.
-* Construct doubly robust one-step and targeted (TML) estimators rooted in
+
+--
+
+__Efficient Estimation:__
+
+* _Doubly robust_ one-step and targeted minimum loss (TML) estimators rooted in
   semiparametric efficiency theory.
-* Use machine learning to flexibly estimate nuisance parameters.
+* Allow state-of-the-art ML for flexible nuisance parameter estimation.
 
 .footnote[[*] [Díaz & van der Laan
   (2012)]( https://doi.org/10.1111/j.1541-0420.2011.01685.x), [Díaz & van der
@@ -234,19 +243,22 @@ class: inverse, center, middle
 ## Quantifying SVE
 
 * Causal parameter based on vaccine efficacy (VE) estimands:
-  $$\text{SVE}(\delta) = 1 - \frac{\mathbb{E}[\mathbb{P}(Y = 1 \mid A = 1,
-    S = s + \delta, L = l) \mid A = 1, L]}{\mathbb{P}(Y(0)=1)}.$$
+  $$
+    \text{SVE}(\delta) = 1 - \frac{\mathbb{E}[\mathbb{P}(Y = 1 \mid A = 1,
+    S = s + \delta, L = l) \mid A = 1, L]}{\mathbb{P}(Y(0)=1)}
+  $$
 * $\mathbb{P}(Y(0)=1)$: counterfactual infection risk in the placebo arm.
   Under randomization, $\mathbb{P}(Y(0)=1) = \mathbb{P}(Y=1 \mid A=0)$.
 * Summarizes VE thru stochastic interventions indexed by $\delta$.
 * _Inverse probability weighted augmentation\*_ to correct for two-phase
   sampling bias.
-* Open source `R` package\* at https://github.com/nhejazi/txshift
+* Open source `R` package\** at https://github.com/nhejazi/txshift
 
-.footnote[[*] [Rose and van der Laan
+.footnote[[*] [Rose & van der Laan
   (2011)](https://doi.org/10.2202/1557-4679.1217),
-  [Hejazi et al. (2020)](https://doi.org/10.1111/biom.13375),
-  [Hejazi & Benkeser (2020)](https://doi.org/10.21105/joss.02447) ]
+  [Hejazi et al. (2020)](https://doi.org/10.1111/biom.13375) ]
+
+.footnote[[**] [Hejazi & Benkeser (2020)](https://doi.org/10.21105/joss.02447)]
 
 ---
 
@@ -266,7 +278,9 @@ knitr::include_graphics(here::here("img", "sieveConcept2.png"))
 
 ---
 
-## Amazing statisticians
+## Thank you!
+
+__Amazing statisticians:__
 
 .pull-left[.tiny[
 __Leadership__
