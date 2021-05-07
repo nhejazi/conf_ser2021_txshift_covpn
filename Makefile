@@ -1,8 +1,8 @@
 TITLE=2021_ser_txshift_covpn
 
-all: deck pdf
+all: html pdf web
 
-deck:
+html:
 	Rscript -e "rmarkdown::render('$(TITLE).Rmd')"
 	cp $(TITLE).html index.html
 
