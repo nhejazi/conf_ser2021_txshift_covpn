@@ -9,6 +9,9 @@ html:
 pdf:
 	Rscript -e "xaringanBuilder::build_pdf('$(TITLE).html', complex_slides=TRUE, partial_slides=TRUE)"
 
+png:
+	./pdf2png.sh
+
 web:
 	rsync -a --exclude=".git" --chmod=go+r "$(pwd -P)" \
 		nhejazi@arwen.berkeley.edu:/mirror/data/pub/users/nhejazi/present/$(TITLE)

@@ -1,8 +1,8 @@
 ---
-title: ' `r icons::icon_style(icons::fontawesome("syringe"), fill="white")` COVID-19 vaccine trials: '
+title: ' `r icons::icon_style(icons::fontawesome("head-side-mask"), fill="white")` COVID-19 vaccine trials `r icons::icon_style(icons::fontawesome("syringe"), fill="white")`'
 subtitle: "Evaluating *causal* vaccine efficacy"
 author: "Nima Hejazi<br> <span style = 'font-size: 75%;'> University of California, Berkeley<br> Division of Biostatistics, School of Public Health </span>"
-date: ' `r icons::icon_style(icons::fontawesome("twitter"), fill="white")` <a href = "https://twitter.com/nshejazi" style = "color: white;">@nshejazi</a> <br> `r icons::icon_style(icons::fontawesome("link"), fill="white")` <a href="https://nimahejazi.org" style="color: white;">nimahejazi.org</a> <br> SER 2021 <br>'
+date: ' `r icons::icon_style(icons::fontawesome("twitter"), fill="white")` <a href = "https://twitter.com/nshejazi" style = "color: white;">@nshejazi</a> <br> `r icons::icon_style(icons::fontawesome("link"), fill="white")` <a href="https://nimahejazi.org" style="color: white;">nimahejazi.org</a> <br> `r icons::icon_style(icons::fontawesome("shield-virus"), fill="white")` SER 2021 `r icons::icon_style(icons::fontawesome("file-medical"), fill="white")` <br>'
 header-includes:
   - \usepackage{bm}
   - \usepackage{bbm}
@@ -20,7 +20,7 @@ output:
 
 class: inverse, center, middle
 
-.huge[Vaccine Correlates]
+.huge[Vaccine Correlates `r icons::icon_style(icons::fontawesome("vial"), fill="white")`]
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
@@ -99,7 +99,7 @@ __Correlates of risk (CoR):__
 
 __Correlates of protection (CoP)__:
 
-* Evaluate immune response's ability to predict vaccine efficacy
+* Evaluate immune response's ability to predict vaccine efficacy (VE)
 * Evaluated via _causal_ parameters
 
 .footnote[[*] [Plotkin and Gilbert (2012)](https://doi.org/10.1093/cid/cis238),
@@ -109,14 +109,14 @@ __Correlates of protection (CoP)__:
 
 ## Correlates of protection
 
-__Effect modifiers of vaccine efficacy (VE)__
+__Immune response in vaccine recipients__
 
 * How does VE vary across subgroups defined by immune response?
 * e.g., [Juraska et al. (2020)](https://doi.org/10.1093/biostatistics/kxy074)
 
 --
 
-__Path-specific mediators of VE (MVE)__
+__Path-specific mediators of vaccine efficacy__
 
 * What percentage of VE is attributable to immune response?
 * [Cowling et al. (2019)](https://doi.org/10.1093/cid/ciy759)
@@ -124,7 +124,7 @@ __Path-specific mediators of VE (MVE)__
 
 --
 
-__Stochastic interventional VE (SVE)__
+__Stochastic interventional vaccine efficacy__
 
 * How would shifting the immune response distribution impact VE?
 * [Hejazi et al. (2020)](https://doi.org/10.1111/biom.13375), Hejazi et al.
@@ -153,22 +153,29 @@ knitr::include_graphics(here::here("img", "casecohort.png"))
 ## Measuring correlates
 
 * Case-cohort designs are a special case of _two-phase sampling\*_:
-  * Phase 1: measure baseline, vaccine, endpoint on everyone.
-  * Phase 2: given baseline, vaccine, endpoint, select members of immune
-    response subcohort with (possibly known) probability.
+  * Phase 1: measure baseline, randomization arm, endpoint on everyone.
+  * Phase 2: given baseline, randomization arm, endpoint, select immune response
+    subcohort members with (possibly known) probability.
 
 --
 
-* Complete (.red[unobserved]) data $X = (L, A, S, Y) \sim P_0^X \in \mathcal{M}^X$:
+* Complete (.red[unobservable]) data unit $X = (L, A, S, Y) \sim P_0^X \in \mathcal{M}^X$:
   * $L$ (covariates): sex, age, baseline risk/exposure score,
-  * $A$ (treatment): randomized placebo vs. vaccine assignment,
+  * $A$ (treatment): randomized placebo versus vaccine assignment,
   * $S$ (exposure): candidate marker immune response profiles at Day 57,
-  * $Y$ (outcome): SARS-CoV-2 infection (starting at 7 days after Day 57).
-* Observed data $O = (C, C X) = (L, C, C S, Y)$, where $C \in \{0,1\}$ indicates
-  inclusion in the second phase sample.
+  * $Y$ (outcome): symptomatic SARS-CoV-2 infection (COVID)
+* Observed data unit $O = (C, C X) = (L, C, C S, Y)$, where $C \in \{0,1\}$
+  indicates selection into the second phase sample.
 
 .footnote[[*] [Breslow et al. (2003)](https://doi.org/10.1214/aos/1059655907),
 [Breslow et al. (2009)](https://doi.org/10.1007/s12561-009-9001-6) ]
+
+???
+
+* In general, we work with _known_ two-phase sampling probabilities in this
+  case-cohort setup, so no need for extra EIF component for efficiency.
+- SARS-CoV-2 infection is measured starting 7+ days after Day 57 to avoid any
+  possibility of infection having occurred prior to second vaccine dose.
 
 ---
 
@@ -184,13 +191,14 @@ __Estimation in two-phase designs:__
 
 __CoVPN statisticians are committed to open science:__
 
-* A version-controlled SAP is
+* A version-controlled statistical analysis plan (SAP) is
   [available](https://doi.org/10.6084/m9.figshare.13198595) for review.
 * An [open source GitHub
   repository](https://github.com/CoVPN/correlates_reporting) implements methods
   from the SAP.
-  - Tools: `RMarkdown`, `renv`, `bookdown`, GNU Make, Travis-CI, AWS.
-  * Proof-of-concept for validating (causal) ML in regulatory context.
+  - Tools: `RMarkdown`, `renv`, `bookdown`, Make, GitHub, Travis CI, AWS.
+  * Proof-of-concept for the validation of modern causal inference methodology
+    in a regulatory context.
 
 ???
 
@@ -259,26 +267,25 @@ __Efficient Estimation:__
   $$
 * $\mathbb{P}(Y(0)=1)$: counterfactual infection risk in the placebo arm.
   Under randomization, $\mathbb{P}(Y(0)=1) = \mathbb{P}(Y=1 \mid A=0)$.
-* Summarizes VE thru stochastic shift interventions indexed by $\delta$.
+* Summarizes VE through stochastic shift interventions indexed by $\delta$.
 
 --
 
 * _Inverse probability weighted augmentation\*_ to correct for sampling bias
   induced by two-phase, case-cohort design.
-* Open source `R` package\** at https://github.com/nhejazi/txshift
+* Open source `R` package\* at https://github.com/nhejazi/txshift
 * Analysis code at https://github.com/CoVPN/correlates_reporting
 
 .footnote[[*] [Rose & van der Laan
   (2011)](https://doi.org/10.2202/1557-4679.1217),
-  [Hejazi et al. (2020)](https://doi.org/10.1111/biom.13375) ]
-
-.footnote[[**] [Hejazi & Benkeser (2020)](https://doi.org/10.21105/joss.02447)]
+  [Hejazi et al. (2020)](https://doi.org/10.1111/biom.13375),
+  [Hejazi & Benkeser (2020)](https://doi.org/10.21105/joss.02447) ]
 
 ---
 
 ## SVE: pseudo-neutralizing antibody
 
-```{r, svecorr1, echo = FALSE, out.width = "80%", fig.align = "center"}
+```{r, svecorr1, echo = FALSE, out.width = "77%", fig.align = "center"}
 knitr::include_graphics(here::here("img", "mcop_sve_Day57pseudoneutid80.png"))
 ```
 
@@ -286,7 +293,7 @@ knitr::include_graphics(here::here("img", "mcop_sve_Day57pseudoneutid80.png"))
 
 ## SVE: spike protein binding antibody
 
-```{r, svecorr2, echo = FALSE, out.width = "80%", fig.align = "center"}
+```{r, svecorr2, echo = FALSE, out.width = "77%", fig.align = "center"}
 knitr::include_graphics(here::here("img", "mcop_sve_Day57bindSpike.png"))
 ```
 
@@ -300,7 +307,7 @@ __Amazing statisticians:__
 __Leadership__
 * Dean Follmann (NIAID)
 * Yonghong Gao (BARDA)
-* Peter Gilbert (FHCRC, UW)
+* .red[_Peter Gilbert (FHCRC, UW)_]
 
 __NIAID__
 * Martha Nason
@@ -308,7 +315,7 @@ __NIAID__
 * All of NIAID Biostatistics
 
 __CoVPN__
-* David Benkeser (Emory)
+* .red[_David Benkeser (Emory)_]
 * Marco Carone (UW)
 * Iván Díaz (Weill Cornell)
 * Alex Luedtke (UW)
@@ -328,4 +335,6 @@ __Fred Hutch__
 
 __OWS Company Statisticians__
 * Way too many to name!
+
+<img src="./img/covpn.png" width="110"/>
 ]]
