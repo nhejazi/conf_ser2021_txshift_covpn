@@ -258,7 +258,7 @@ __Efficient Estimation:__
 
 ---
 
-## Quantifying Stochastic VE
+## Quantifying stochastic VE
 
 * Causal parameter based on vaccine efficacy (VE) estimands:
   $$
